@@ -59,7 +59,9 @@ public class E_Operation {
 		int x = 10;
 		int y = 2;
 		System.out.println(x % y == 0 ? "2의 배수입니다." : "2의 배수가 아닙니다");
-		
+	
+		// Window >> Editor >> Toggle Word Wrap 클릭
+		// : alt + shift + y
 		
 
 	}

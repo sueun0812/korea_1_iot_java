@@ -1,0 +1,14 @@
+package chapter01;
+
+public class E_Operation {
+
+	public static void main(String[] args) {
+		// 연산자
+		System.out.println(10 + 20);
+		System.out.println(10 - 20);
+		System.out.println(10 * 20);
+		System.out.println(10 / 20);
+
+	}
+
+}
