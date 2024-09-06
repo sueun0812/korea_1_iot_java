@@ -25,7 +25,7 @@ public class D_IO {
 		
 		System.out.println("!!!");	// 안녕하세요!!!
 		
-		// cf) 자바의 출력은 문자열 사용 시 쌍 따옴표로 지
+		// cf) 자바의 출력은 문자열 사용 시 쌍따옴표로 지정
 		
 		// 2. 입력
 		// Scanner 객체 사용

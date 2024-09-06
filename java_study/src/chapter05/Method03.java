@@ -47,7 +47,8 @@ public class Method03 {
 		MyMath mm = new MyMath();	// 앞에는 mm이 MyMath 클래스 타입임을 명시, 뒤에는 클래스의 생성자를 호출한 것
 		
 		System.out.println(mm.add(10, 20)); 	// 메서드 호출
-		mm.noReturn();
+		mm.noReturn();	// 해당 메서드는 반환값이 없습니다.
+		System.out.println(mm.yesReturn());
 		
 		System.out.println(mm.max(10, 20));	// 20
 		System.out.println(mm.min(10, 20));	// 10
