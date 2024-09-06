@@ -32,7 +32,7 @@ public class B_DataTYpe {
 		
 		int height = 165;	// 변 선언과 동시에 초기화
 		
-		// long 타입은 숫자 뒤에 알파벳 L, l을 써서 Long형태임을 표
+		// long 타입은 숫자 뒤에 알파벳 L, l을 써서 Long 형태임을 표시
 		long bigNumber = 100000000000L;
 		
 		// 자동완성 단축키 : command + space
@@ -48,7 +48,7 @@ public class B_DataTYpe {
 		char lastName = '이';
 		
 //		2-3. 실수형(부동소수점 타입): 소수점 자리가 있는 수
-//		float: 4바이트 소수점, 숫자 뒤에 알파벳 F를 써서 float형임을 표시
+//		float: 4바이트 소수점, 숫자 뒤에 알파벳 F를 써서 float 형태임을 표시
 //		double*(기본): 8바이트 소수점. 기본 실수 타입
 		
 		float weight1 = 70.123234345f;;

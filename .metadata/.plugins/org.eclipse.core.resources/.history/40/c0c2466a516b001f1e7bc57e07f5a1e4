@@ -1,0 +1,65 @@
+package chapter04;
+
+// 클래스 생성 (Book, Person, ...)
+// : 속성 2개
+// : 메서드 1개
+
+class Book {
+	String title;
+	int page;
+	void bookInfomation() {
+		System.out.println("책의 이름은 " + title + "이고 " + page + "p 입니다.");
+	}
+	
+	Book(String title, int page) {
+		this.title = title;
+		this.page = page;
+	}
+}
+
+class Book2 {
+	// 클래스 내부의 데이터(속성)
+	String title;	// 책 제목
+	String publisher;	// 출판사
+	int pageNumber;	// 책 페이지 
+	
+	// 클래스 내부의 동작(메서드)
+	void displayInfo() {
+		System.out.println(title + publisher);
+	}
+	
+	// === 생성자 함수 ===
+	// : new 연산자 사용 시 호출 될 메서드
+	// >> 생략 시 속성에 기본값이 할당
+	// 일반 타입 : int(0), boolean(false), char("")
+	// 참조 타입 : null
+	
+	// >> 생략 시 클래스명과 동일하면서 매개변수가 없는 메서
+}
+
+public class Object04 {
+
+	public static void main(String[] args) {
+		// 위에서 지정한 클래스를 사용하여 객체 인스턴스화
+		Book myBook = new Book("어린왕자", 500);
+		
+		// 속성 출력
+		System.out.println(myBook.title);
+		System.out.println(myBook.page);
+		
+		// 메서드 호출
+		myBook.bookInfomation();
+		
+		
+		System.out.println("---------------");
+		Book2 myBook2 = new Book2();
+		
+		System.out.println(myBook2.title);
+		System.out.println(myBook2.publisher);
+		System.out.println(myBook2.pageNumber);
+		
+		
+
+	}
+
+}

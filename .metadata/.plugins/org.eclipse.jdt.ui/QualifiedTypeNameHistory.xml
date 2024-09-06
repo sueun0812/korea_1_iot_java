@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="chapter04.CarClass"/>
+    <fullyQualifiedTypeName name="chapter05.Calculator"/>
+    <fullyQualifiedTypeName name="chapter05.Operator"/>
+    <fullyQualifiedTypeName name="chapter05.BaseballPlayer"/>
 </qualifiedTypeNameHistroy>
