@@ -37,16 +37,16 @@ public class E_Operation {
 		// : 논리 값(boolean)값을 연산
 		
 		// && : and(논리곱)
-		System.out.println(true && true);
-		System.out.println(true && false);
+		System.out.println(true && true);	// true
+		System.out.println(true && false);	// false
 		
 		// || : or(논리합)
-		System.out.println(true || true);
-		System.out.println(true || false);
+		System.out.println(true || true);	// true
+		System.out.println(true || false);		// true
 		
 		// ! : not(부정논리)
-		System.out.println(!true);
-		System.out.println(!false);
+		System.out.println(!true);	// false
+		System.out.println(!false);	// true
 		
 		System.out.println("======");
 		System.out.println(3 > 2 && 1 == 1); 	// true
