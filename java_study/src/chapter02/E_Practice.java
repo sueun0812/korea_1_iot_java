@@ -22,7 +22,7 @@ public class E_Practice {
 			
 			System.out.print("메뉴 선택: ");
 			
-			// .nextLine(); : 개행 문자(enter키 값, 줄바꿈)까지 처
+			// .nextLine(); : 개행 문자(enter키 값, 줄바꿈)까지 처리
 			String selectedMenu = sc.nextLine();
 			
 			switch (selectedMenu) {

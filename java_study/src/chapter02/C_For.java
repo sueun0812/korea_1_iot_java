@@ -10,7 +10,7 @@ public class C_For {
 	public static void main(String[] args) {
 		// for문
 		// : 특정 조건이 만족될 때까지 코드 블록을 반복 실행
-		// >> 횟수가 정해져 있을 
+		// >> 횟수가 정해져 있을 때
 		
 		/*
 		 	for (초기화; 조건; 증감) { 조건이 만족될 때 실행할 코드 }

@@ -59,7 +59,7 @@ public class A_Array {
 		int[] scoreList = new int[] {90, 85, 100};
 		System.out.println(scoreList[0]);
 		
-		// a. 데이터타입[] 배열명 = {요소1, 요소2, 요소3, ...}
+		// b. 데이터타입[] 배열명 = {요소1, 요소2, 요소3, ...}
 		char[] greet = {'h', 'e', 'l', 'l', 'o'};
 		System.out.print(greet[0]);
 		System.out.print(greet[1]);

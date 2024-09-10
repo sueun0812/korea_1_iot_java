@@ -1,0 +1,7 @@
+package chapter13;
+
+import 
+@Data
+public class Example2 {
+
+}

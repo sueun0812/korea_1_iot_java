@@ -28,10 +28,11 @@ public class B_Switch {
 			break;
 		default:
 			// default문은 case 조건식이 끝난 뒤 작성
-//			: 어느 case에도 일치하지 않을 경
+//			: 어느 case에도 일치하지 않을 경우
 			System.out.println("범위 초과");
 		}
 		
 		sc.close();
+		
 	}
 }
