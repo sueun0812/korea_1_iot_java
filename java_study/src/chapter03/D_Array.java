@@ -18,7 +18,7 @@ public class D_Array {
 		
 		// cf) 동적 배열의 경우 배열의 타입 지정 시 일반 데이터 타입 X, 참조 타입으로 작성
 		// int >> Integer
-		// char >> Charactor
+		// char >> Character
 		// boolean >> Boolean
 		// String
 		

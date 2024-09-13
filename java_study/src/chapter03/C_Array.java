@@ -5,7 +5,6 @@ import java.util.Arrays;
 // Arrays 클래스
 // : 배열을 조작하는데 유용한 기능들을 제공
 // >> 정렬, 검색, 변환 등
-
 // - java.util 패키지 내부에 포함
 // : import 구문을 사용
 
@@ -39,7 +38,10 @@ public class C_Array {
 		// Arrays.equals(a배열, b배열)
 		// >> 논리형태로 반환
 		int[] number2 = {1, 2, 3, 5, 4};
-		System.out.println(Arrays.equals(numbers, number2));	// false (배열값 순서가 다름)
+		int[] number3 = {1, 2, 3, 5, 4};
+		
+		System.out.println(Arrays.equals(number2, number3));		// true
+		System.out.println(Arrays.equals(numbers, number2));		// false (배열값 순서가 다름)
 		
 		// === 배열의 채움 ===
 		// Arrays.fill(배열, 삽입할 값);

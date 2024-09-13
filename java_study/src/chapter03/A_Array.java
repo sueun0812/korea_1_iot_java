@@ -1,5 +1,7 @@
 package chapter03;
 
+import java.util.Arrays;
+
 // 배열(Array)
 // : 같은 타입의 여러 변수를 하나의 집합으로 묶어서 처리하는 자료 구조
 // - 데이터를 연속적으로 저장

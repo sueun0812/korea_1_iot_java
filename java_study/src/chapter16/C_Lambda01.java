@@ -1,0 +1,108 @@
+package chapter16;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Comparator;	// 두 객체를 비교하는데 사용되는 함수형 인터페이스
+
+// 람다 표현식(Lambda Expression)
+// : 함수형 인터페이스 구현에 사용, 자바 8에서 도입된 기능
+// > 간결성, 함수형 프로그래밍 지원 등의 특징
+// > 익명 클래스를 대체하여 코드의 가독성 향상에 기여
+
+// === 기본 형태 ===
+// (매개변수1, 매개변수2, ...) -> { 실행할 코드 }
+
+// 매개변수 : 함수형 인터페이스에서 메서드와 동일한 매개변수를 사용
+// 화살표 : 매개변수와 실행할 코드의 구분
+// 코드 블록 : 중괄호 영역
+// cf) 단일 표현식인 경우 중괄호 생략 가능
+
+class Student2 {
+	private String name;
+	private int score;
+	
+	public Student2(String name, int score) {
+		this.name = name;
+		this.score = score;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getScore() {
+		return score;
+	}
+}
+
+//인터페이스 정의 - 성적 계산
+interface Grading2 {
+	String calculateGrade(Student2 student); 	// 추상 메서드
+	
+}
+
+public class C_Lambda01 {
+	public static void main(String[] args) {
+		List<Student2> students = new ArrayList<Student2>();
+		students.add(new Student2("정수은", 85));
+		students.add(new Student2("정쪼꼬", 95));
+		students.add(new Student2("박규병", 90));
+		students.add(new Student2("정파이", 100));
+		students.add(new Student2("마홍준", 77));
+		
+		// 람다 표현식을 사용한 성적 계산
+		Grading2 grading = (Student2 student) -> {
+			int score = student.getScore();
+			if(score > 100 || score < 0) {
+				System.out.println("잘못된 점수입니다.");
+				return null; 
+			} else if (score >= 90) {
+				return "A";
+			} else if (score >= 80) {
+				return "B";
+			} else if (score >= 70) {
+				return "C";
+			} else if (score >= 60) {
+				return "D";
+			} else {
+				return "F";
+			}
+		};
+		
+		// 성적 출력
+		for(Student2 student : students) {
+			System.out.println(student.getName() + "의 성적" + grading.calculateGrade(student));
+		}
+		/*
+		 	정수은의 성적B
+			정쪼꼬의 성적A
+			박규병의 성적A
+			정파이의 성적A
+			마홍준의 성적C
+		 */
+		
+		// 학생 성적에 따라 정렬
+		students.sort(Comparator.comparingInt(Student2::getScore));	// 오름차
+		students.sort(Comparator.comparingInt(Student2::getScore).reversed());	// 내림차
+		for(Student2 student : students) {
+			System.out.println(student.getName() + "의 성적" + student.getScore());
+		}
+		/*
+		 	정파이의 성적100
+			정쪼꼬의 성적95
+			박규병의 성적90
+			정수은의 성적85
+			마홍준의 성적77
+		 */
+		
+		// cf) 메서드 참조 (매개변수명이 같을 때 :: 으로 사용 가능)
+		// (Student2 st) -> getScore(st);
+		// Student2::getScore
+		
+		// (x) -> 인스턴스.메서드명(x);
+		// 인스턴스::메서드명
+		
+		// (x) -> 클래스명.메서드명(x);
+		// 클래스::메서드명
+	}
+}

@@ -1,5 +1,7 @@
 package chapter03;
 
+import java.util.Arrays;
+
 // 다차원 배열
 // : 배열의 배열 (2, 3, 4... 차원)
 // >> 데이터를 테이블 형태로 구성할 때 유용
