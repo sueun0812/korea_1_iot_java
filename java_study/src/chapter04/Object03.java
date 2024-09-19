@@ -6,7 +6,7 @@ class Car {
 	String model;	// 모델
 	int year;	// 제조 연도
 	
-	// 클래스의 행동(메서
+	// 클래스의 행동(메서드)
 	// : 클래스 내부에서 정의된 함수, 객체의 행동을 표현
 	// >> 클래스의 데이터(필드)를 사용하여 특정 작업을 수행하거나
 	//		, 해당 값을 변경 가능, 값을 반환
@@ -37,13 +37,13 @@ public class Object03 {
 		// : 클래스의 생성자를 호출 - 객체의 초기 상태를 설정
 		
 		// 클래스명의 클래스의 새로운 객체를 생성
-		// >> 해당 객체에 대한 참조(주소)를 클래스 타입의 변수에 저
+		// >> 해당 객체에 대한 참조(주소)를 클래스 타입의 변수에 저장
 		Car myCar = new Car("람보르기니 레부엘토", 2024);
 		
 		// 객체 사용
 		// 1. 필드 접근(.연산자 사용)
-		System.out.println(myCar.model);
-		System.out.println(myCar.year);
+		System.out.println(myCar.model);	// 람보르기니 레부엘토
+		System.out.println(myCar.year);		// 2024
 		
 		// 2. 메서드 호출(.연산자 사용)
 		myCar.displayInfo();		// Model: 람보르기니 레부엘토, Year: 2024

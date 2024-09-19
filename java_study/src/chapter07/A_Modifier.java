@@ -28,13 +28,15 @@ class PrivateClass {
 }
 
 // 2) default
-// : 같은 패키지 내라면 중복 불가
+// : 같은 패키지 내라면 클래스명 중복 불가
 // : 패키지 외부에서는 접근 불가
 // >> 패키지 내부에서는 중복 불가, 접근 가능
 class DefaultClass {
 	// 같은 패키지 내의 다른 클래스들에 접근 가능
 	int myField;
-	void myMethod() {}
+	void myMethod() {
+		System.out.println("DefaultClass");
+	}
 }
 
 // 3) protected
@@ -44,7 +46,7 @@ class ProtectedClass extends ParentClass {
 	
 	public ProtectedClass() {
 		// protected 속성과 메서드일 경우
-		// >> 상속받은 클래스에서 기능은 다른 패키지더라도 접근 가능
+		// >> 상속받은 클래스에서 다른 패키지더라도 접근 가능
 		System.out.println(protectedField);		// 안녕하세요
 		exampleMethod(); 	// 상속받은 클래스에서 호출 가능
 		
@@ -57,16 +59,17 @@ public class A_Modifier {
 
 	public static void main(String[] args) {
 		PrivateClass pc = new PrivateClass();
-		// pc.myField;
+//		 pc.myField; - Error
 		// >> private 설정된 속성과 메서드는 해당 클래스 내부에서만 읽을 수 있음
 		
 		DefaultClass dc = new DefaultClass();
 		dc.myField = 10;
-		dc.myMethod();  // hi
+		dc.myMethod(); 
 		
 		ProtectedClass pc2 = new ProtectedClass();
+//		안녕하세요
+//		hi
 	
-		
 
 	}
 

@@ -9,6 +9,8 @@ public class B_Modifier {
 
 	public static void main(String[] args) {
 		System.out.println(A_Modifier.name); 		// 정수은
+		
+		
 	}
 
 }

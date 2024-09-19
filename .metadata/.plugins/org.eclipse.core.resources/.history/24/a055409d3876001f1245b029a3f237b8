@@ -1,0 +1,131 @@
+package chapter18;
+
+// === 빌더 패턴 없이 ===
+// 학생 클래스 구현
+
+// 1) private한 필드 데이터 설정
+// : name, age (필수 속성)
+// : grade, major (선택적 속성)
+
+// 2) 필수/선택적 값을 받을 생성자 구현
+// >> 생성자 4개 구현
+
+// 3) 데이터 호출을 위한 Getter 구현
+// >> 각 필드에 대한 getter 구현
+
+class Student {
+	private final String name;
+	private final int age;
+	private String grade;	// 학년
+	private String major;
+	
+	// === 빌더 패턴 사용 시의 생성자 ===
+	private Student(Builder builder) {
+		this.name = builder.name;
+		this.age = builder.age;
+		this.grade = builder.grade;
+		this.major = builder.major;
+	}
+	
+	// === 빌더 클래스 정의 (내부 클래스) ===
+	public static class Builder {
+		private final String name;
+		private final int age;
+		private String grade;	// 학년
+		private String major;
+		
+		// 필수 필드의 
+		public Builder(String name, int age) {
+			this.name = name;
+			this.age = age;
+		}
+		
+		// 선택적 필드의 체이닝을 위한 메서드
+		public Builder grade(String grade) {
+			this.grade = grade;
+			return this;
+		}
+		
+		public Builder major(String major) {
+			this.major = major;
+			return this;
+		}
+		
+		// 빌더를 통한 Student 인스턴스 생성
+		public Student builde() {
+			return new Student(this);	// this에 pubilc Builder 클래스 타입이 들어감
+		}
+	}
+	
+	// 생성자
+//	public Student(String name, int age) {
+//		this.name = name;
+//		this.age = age;
+//	}
+	
+	// cf) 생성자의 오버로딩
+	// : 파라미터의 개수와 타입이 같다면 생성자 호출 시 충돌 발생
+//	public Student(String name, int age, String selectedField) {
+//		this.name = name;
+//		this.age = age;
+//		this.grade = selectedField;
+//	}
+	
+//	public Student(String name, int age, String major) {
+//		
+//	}
+	
+//	public Student(String name, int age, String grade, String major) {
+//		this.name = name;
+//		this.age = age;
+//		this.grade = grade;
+//		this.major = major;
+//	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public String getMajor() {
+		return major;
+	}	
+}
+
+
+public class Builder02 {
+	public static void main(String[] args) {
+//		Student st1 = new Student("정수은", 30, "1학년");
+//		Student st2 = new Student("정쪼꼬", 10);
+//		Student st3 = new Student("박규병", 35, "2학년");
+//		
+//		System.out.println(st1.getGrade());	// 1학년
+//		System.out.println(st2.getAge());		// 10
+//		System.out.println(st3.getName());	// 박규병
+		
+		Student std1 = new Student.Builder("정수은", 10).builde();
+		Student std2 = new Student.Builder("정쪼꼬", 5)
+				.grade("1학년")
+				.major("멍멍학과")
+				.builde();
+		Student std3 = new Student.Builder("박규병", 20)
+				.grade("3학년")
+				.builde();
+		Student std4 = new Student.Builder("정파이", 1)
+				.major("대작전학과")
+				.builde();
+		
+		System.out.println(std1.getName());		// 정수은
+		System.out.println(std2.getName());	// 정쪼꼬
+		System.out.println(std3.getName());	// 박규병
+		System.out.println(std4.getName());	// 정파이
+		
+	}
+}

@@ -43,6 +43,7 @@ public class MethodPractice {
 		BaseballPlayer player3 = new BaseballPlayer("성찬영", 0.301, 11);
 		BaseballPlayer player4 = new BaseballPlayer("박영준", 0.274, 3);
 		
+		
 		System.out.println("총 생성된 선수의 수 : " + BaseballPlayer.playerCount);
 		
 

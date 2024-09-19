@@ -66,7 +66,8 @@ public class Inheritance {
 		Dog choco = new Dog();
 		choco.name = "초코";
 		
-		System.out.println(choco.name);
+		System.out.println(choco.name);	// 초코
+		choco.bark(); 	// 강아지가 짖습니다.
 		
 		System.out.println("-----------------------");
 		SmartTv stv = new SmartTv();
@@ -79,6 +80,11 @@ public class Inheritance {
 		stv.displayOtt("Neflix");		// OTT 연결이 되지 않았습니다.
 		stv.ott = true;
 		stv.displayOtt("Netflix"); 	// Netflix
+		
+		stv.power = true;
+		System.out.println(stv.power);	// true
+		stv.power();	// 인스턴스 변수 power의 값 반전 
+		System.out.println(stv.power);	// false
 		
 		
 	}

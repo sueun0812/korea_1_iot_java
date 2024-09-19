@@ -4,7 +4,7 @@ package chapter06;
 // : 변수, 메서드, 생성자
 
 // === 생성자 ===
-// : 인스턴스(객체)가 생성될 떄 호출되는 '인스턴스 초기화 메서드'
+// : 인스턴스(객체)가 생성될 때 호출되는 '인스턴스 초기화 메서드'
 
 // 생성자 조건
 // : 생성자 이름은 클래스 이름과 동일해야 함
@@ -66,12 +66,12 @@ public class Constructor {
 	public static void main(String[] args) {
 		
 		Data1 data1 = new Data1();
-		data1.value = 10;
+		data1.value = 10;	// 객체 생성 후 별도로 인스턴스 변수에 값 할당 필요
 		
-		Data2 data2 = new Data2(10);
+		Data2 data2 = new Data2(10);	// 객체 생성과 동시에 값 할당 가능
 		
-		System.out.println(data1.value);
-		System.out.println(data2.value);
+		System.out.println(data1.value);	// 10
+		System.out.println(data2.value);	// 10
 		
 		System.out.println(" Car 클래스 사용 ");
 		Car c1 = new Car();	// 기본 생성자
@@ -80,7 +80,7 @@ public class Constructor {
 		c1.gearType = "수동";
 		c1.displayInfo(); 	// red수동2
 		
-		Car c2 = new Car("white", "자동", 4);	// 사용자 정의 생성자
+		Car c2 = new Car("white", "자동", 4);		// 사용자 정의 생성자
 		c2.displayInfo(); 	// white자동4
 		
 		Car c3 = new Car("blue");

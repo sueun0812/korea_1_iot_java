@@ -54,10 +54,10 @@ public class Overring {
 	public static void main(String[] args) {
 		
 		DogClass dog1 = new DogClass();
-		dog1.sound();
+		dog1.sound();	// 개가 멍멍하고 짖습니다.
 
 		CatClass cat1 = new CatClass();
-		cat1.sound();
+		cat1.sound();		// 고양이가 야옹하고 웁니다.
 		
 		// 부모로부터 상속받은 속성이나 메서드를 확장하는 개념
 		// : 해당 상태나 동작을 반드시 가지지만 상속받는 클래스마다 차이를 두고 싶을 때 사용
