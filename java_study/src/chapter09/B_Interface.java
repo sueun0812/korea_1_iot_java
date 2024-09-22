@@ -39,7 +39,7 @@ interface PlayingCard {
 	// : public static final 특성을 가짐
 	// >> 해당 키워드들이 생략 O
 	// >> 타입 상수명 = 값;
-	public static final int Spade = 4;
+	public static final int SPADE = 4;
 	final int DIAMOND = 3;
 	static int HEART = 2;
 	int CLOVER = 1;
@@ -97,8 +97,8 @@ public class B_Interface {
 		
 		// == 인터페이스의 추상 메서드 사용 ==
 		Card card = new Card("7", "Heart");
-		System.out.println(card.getCardNumber());
-		System.out.println(card.getCardKind());
+		System.out.println(card.getCardNumber());		// 7
+		System.out.println(card.getCardKind());	// Heart
 		
 		// 재정의(오버라이딩)가 선택적
 		card.defaultMethod(); // Card 클래스에서 재정의된 디폴트 메서드입니다.
@@ -110,6 +110,6 @@ public class B_Interface {
 		System.out.println(PlayingCard.CLOVER);
 		System.out.println(PlayingCard.DIAMOND);
 		System.out.println(PlayingCard.HEART);
-		System.out.println(PlayingCard.Spade);
+		System.out.println(PlayingCard.SPADE);
 	}
 }

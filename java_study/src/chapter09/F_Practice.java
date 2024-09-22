@@ -3,7 +3,7 @@ package chapter09;
 // 인터페이스
 // Fruit 인터페이스 정의
 // - color 라는 추상 메서드
-// - descrive 라는 디폴트 메서드
+// - describe 라는 디폴트 메서드
 // - printType 라는 정적 메서드
 
 interface Fruit {

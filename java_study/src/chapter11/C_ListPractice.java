@@ -76,5 +76,7 @@ public class C_ListPractice {
 		System.out.println(event.checkParticipant("이승아"));	// true
 		System.out.println(event.checkParticipant("윤대휘"));	// true
 		System.out.println(event.checkParticipant("정규민"));	// false
+		
+		System.out.println(event.waitingQueue); 	// 정규민
 	}
 }

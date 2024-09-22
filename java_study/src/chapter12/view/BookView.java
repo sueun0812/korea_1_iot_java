@@ -43,8 +43,11 @@ public class BookView {
 			case 3: 
 				searchBookView();
 				break;
-			default:
+			case 4:
 				System.out.println("종료하겠습니다.");
+				break;
+			default:
+				System.out.println("1~4 중에 선택해주세요.");
 				break;
 			}
 		}

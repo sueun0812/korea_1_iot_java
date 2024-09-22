@@ -39,5 +39,5 @@ public class BookRepository {
 	// 전체 책 데이터를 반환
 	public List<Book> findAll() {
 		return books;
-	}
+	}		
 }

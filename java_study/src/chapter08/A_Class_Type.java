@@ -24,22 +24,6 @@ class Child extends Parent {
 	}
 }
 
-class Animal {
-	void display() {
-		System.out.println("동물입니다");
-	}
-}
-
-class Dog extends Animal {
-	void display() {
-		System.out.println("강아지입니다.");
-	}
-	
-	void bark() {
-		System.out.println("멍멍 짖습니다.");
-	}
-}
-
 public class A_Class_Type {
 
 	public static void main(String[] args) {
@@ -62,6 +46,8 @@ public class A_Class_Type {
 		
 		// 부모클래스 객체변수 = 자식객체변수;
 		Parent p1 = c1;
+		p1.displayInfo(); 	// 자식 클래스입니다.
+//		p1.ownMethod(); - Error
 		
 		// === 클래스의 강제 타입 변환 (Downcating, 다운캐스팅) ===
 		// : 부모 클래스 타입으로 변환된 객체를
@@ -71,8 +57,8 @@ public class A_Class_Type {
 		Parent p2 = new Child(); // 자동 형 변환 (묵시적)
 		// p2.ownMethod(); - Error
 		
-		// 자식 타입 변수 = (자식타입) 부모객체;
-		Child c2 = (Child)p2;
+		// 자식타입 변수 = (자식타입) 부모객체;
+		Child c2 = (Child) p2;
 		c2.ownMethod();	// 자식만의 메서드입니다.
 		
 

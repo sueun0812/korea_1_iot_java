@@ -64,11 +64,13 @@ public class E_Map {
 
 		System.out.println(student.containsKey("이도경"));	// true
 		System.out.println(student.containsKey("이지훈"));	// false
+		System.out.println(student.containsKey("이승아"));	// false
 		
 		System.out.println(student.size());	// 2
 		
 		System.out.println(student.keySet());	// [김명진, 이도경]
 		System.out.println(student.values());	// [34, 30]
+		System.out.println(student.entrySet()); 	// [김명진=34, 이도경=30]
 		
 	}
 }

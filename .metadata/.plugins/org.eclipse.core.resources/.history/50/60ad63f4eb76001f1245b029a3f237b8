@@ -1,0 +1,21 @@
+package chapter20.Livrary2.service;
+
+import chapter20.Livrary.BookRepository;
+import chapter20.Livrary2.model.Book;
+import chapter20.Livrary2.model.User;
+import chapter20.Livrary2.repository.UserRepository;
+
+public class LibraryService {
+	private BookRepository bookRepository = new BookRepository();
+	private UserRepository userRepository = new UserRepository();
+	
+	public void addBook(Book book) {
+		bookRepository.addBook(book);		
+	}
+
+	public void registerUser(User user) {
+		userRepository.addUser(user);		
+	}
+	
+	
+}

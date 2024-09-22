@@ -8,7 +8,7 @@ package chapter11;
 // >> 자바 컬렉션 프레임워크의 상위 인터페이스, 데이터의 집합을 다룸
 
 // 2. List
-// : 데이터의 순서 유지 O, 중복 허용 O (ArrayList, SinkedList 등)
+// : 데이터의 순서 유지 O, 중복 허용 O (ArrayList, LinkedList 등)
 
 // 3, Set
 // : 데이터의 순서 유지 X, 중복 허용 X (HashSet, TreeSet 등)
