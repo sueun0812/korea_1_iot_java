@@ -17,8 +17,8 @@ public class BookController {
 	}
 	
 	// 1. 책을 추가하는 기능
-	public void addBook(String title, String author, String publisher) {
-		Book newBook = new Book(title, author, publisher);
+	public void addBook(String itle, String author, String publisher) {
+		Book newBook = new Book(itle, author, publisher);
 		books.add(newBook);
 	}
 	

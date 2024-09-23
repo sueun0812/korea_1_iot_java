@@ -40,10 +40,6 @@ public class BookController {
 			}
 		}
 		
-		if (result.isEmpty()) {
-			System.out.println("일치하는 책이 없습니다.");
-		}
-		
 		return result;
 	}
 }

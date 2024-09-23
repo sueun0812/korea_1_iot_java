@@ -60,6 +60,6 @@ public class MVC {
 	
 	// Controller (사용자의 입력을 받아 Model과 View 사이에서 중재)
 	// : BookController 클래스
-	// (사용자의 입력에 따라 적절한 Model 메서드를 호출)
+	// (사용자의 입력에 다라 적절한 Model 메서드를 호출)
 	
 }
